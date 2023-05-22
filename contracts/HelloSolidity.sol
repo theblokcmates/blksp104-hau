@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 // import "hardhat/console.sol";
-
 error NotOwner();
 
 contract HelloSolidity {
@@ -14,10 +13,7 @@ contract HelloSolidity {
     }
 
     function storeMessage(uint256 index, string memory message) public {
-        if (msg.sender != deployer) {
-            revert NotOwner();
-        }
-        // require(msg.sender == deployer, "Caller is not the owner");
+        require(msg.sender == deployer, "Caller is not the owner");
         messages[index] = message;
     }
 
@@ -25,8 +21,7 @@ contract HelloSolidity {
         return messages[index];
     }
 
-    function logSender() public returns (address) {
-        deployer = msg.sender;
+    function logSender() public view returns (address) {
         return msg.sender;
     }
 }
