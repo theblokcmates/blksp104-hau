@@ -1,0 +1,5 @@
+npx hardhat verify --network sepolia 0x00 "Hello World"
+
+npx hardhat verify \
+--contract contracts/Coin.sol:Coin \
+--network goerli 0x00
