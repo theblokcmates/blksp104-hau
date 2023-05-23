@@ -1,5 +1,9 @@
 npx hardhat verify --network sepolia 0x00 "Hello World"
 
 npx hardhat verify \
---contract contracts/Coin.sol:Coin \
---network goerli 0x00
+--contract contracts/HelloSolidity.sol:HelloSolidity \
+--network sepolia 0xc9Cabfd60b5Bb67f5E3F208e351199A8DC5019de hello!
+
+npx hardhat verify \
+--contract contracts/FoodCoin.sol:FoodCoin \
+--network sepolia 0xFa7DF7b6b35F64d75cEb8F30062c2DE4ACA7bAFc

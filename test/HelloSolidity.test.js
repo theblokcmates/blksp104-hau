@@ -1,13 +1,16 @@
 const { expect } = require("chai");
 
 describe("Hello Solidity Test", function() {
-    xit("should store a message", async function() {
+    it("should store a message", async function() {
+        
         const HelloSolidity = await ethers.getContractFactory("HelloSolidity");
         const contract = await HelloSolidity.deploy("hello HAU");
-        await contract.storeMessage(1, "hello The BLOKC!")
 
-        const response = await contract.getMessage(1);
-        expect(response).to.be.equal('hello The BLOKC!')
+        await contract.storeMessage(1, "hello The BLOKC!")
+        const actual = await contract.getMessage(1);
+
+        const expected = 'hello The BLOKC!'
+        expect(actual).to.be.equal(expected)
     })
 
     it("should return msg.sender", async function() {
