@@ -5,5 +5,5 @@ npx hardhat verify \
 --network sepolia 0xc9Cabfd60b5Bb67f5E3F208e351199A8DC5019de hello!
 
 npx hardhat verify \
---contract contracts/FoodCoin.sol:FoodCoin \
---network sepolia 0xFa7DF7b6b35F64d75cEb8F30062c2DE4ACA7bAFc
+--contract contracts/AngelNFT.sol:AngelNFT \
+--network goerli 0xE310dd93549296Fc1DD8ad66D8790F49D7Aa8dF4
